@@ -1,0 +1,35 @@
+a {
+  padding: 5px;
+  border-radius: 8px;
+}
+
+a:hover {
+  background: rgba(123, 123, 123, 0.2);
+}
+
+img {
+  width: 50px;
+}
+
+.toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--mainDark);
+}
+.toggle .toggle-thumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 5%;
+  width: 17px;
+  height: 17px;
+  background: #f0f0f0;
+  border-radius: 50px;
+  transition: all 0.2s linear;
+}
+.toggle .fa-regular {
+  font-size: 0.8rem;
+  color: var(--mainDark);
+}/*# sourceMappingURL=navbar.css.map */

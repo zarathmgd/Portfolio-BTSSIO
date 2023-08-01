@@ -1,0 +1,28 @@
+.square {
+  position: relative;
+  animation: bounce 1.5s linear infinite;
+}
+.square .fa-solid.fa-arrow-down {
+  transform: rotate(-45deg);
+  font-size: 1.3rem;
+}
+
+a i {
+  font-size: 1.2rem;
+}
+a .fa-solid.fa-arrow-up {
+  color: rgba(153, 153, 153, 0.5);
+  transform: rotate(45deg);
+}
+
+@keyframes bounce {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 10px;
+  }
+  100% {
+    top: 0;
+  }
+}/*# sourceMappingURL=contact.css.map */
