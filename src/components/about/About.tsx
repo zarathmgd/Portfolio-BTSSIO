@@ -70,13 +70,13 @@ export default function About() {
         </Typography>
         <AboutContent
           title={"Who am i ?"}
-          textOne={"I'm a 19 years old self-taught front-end developer. I live in France, near Paris"}
+          textOne={"I'm a 19 years old self-taught student in IT. I live in France, near Paris"}
           textTwo={"I go to the gym to work on my physique and I love cooking healthy and tasty meals."}
         />
         <AboutContent
           title={"What I do ?"}
           textOne={
-            "I learnt web development with online courses by starting with HTML, CSS and Javascript. I practiced them by building basic projects like a calculator, timer or a todo app. After that, I decided to learn React and some tools like Material UI or Redux for state management."
+            "I learnt web development with online courses by starting with HTML, CSS and Javascript. After that, I learnt about Typescript, React & MUI. Having an interest in digital, I continued with graphic design. I now want to train in data and digital marketing in order to have a versatile profile to become a project manager."
           }
         />
       </Box>
