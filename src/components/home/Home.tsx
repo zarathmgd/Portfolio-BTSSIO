@@ -45,12 +45,13 @@ export default function Home() {
               <Typography variant="h1">Zarath Mougamadou</Typography>
             </Box>
             <Typography variant="body2">
-              19 years old french student in web development. <br /> I want to become a front-end developer. <br /> Here is my
+              21 years old french student in IT. <br /> I want to become a digital project manager. <br /> Here is my
               portfolio, enjoy !
             </Typography>
             <Button
               variant="outlined"
               sx={{ px: "25px", borderColor: "primary.main", ":hover": { backgroundColor: "primary.hover" } }}
+              href="#about"
             >
               More informations
             </Button>

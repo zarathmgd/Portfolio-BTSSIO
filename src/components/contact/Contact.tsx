@@ -72,8 +72,7 @@ export default function Contact() {
         </Typography>
         <Typography variant="h3">What's next ?</Typography>
         <Typography variant="body2" sx={{ textAlign: { xs: "center", md: "start" } }}>
-          I’m currently looking for a front-end developer job. If you are a company who is interested by a self-taught front-end
-          developer, click below !
+          I’m currently looking for an apprenticeship contract. If you are a company who is interested by my profile, click below !
         </Typography>
         <Box
           className="square"
