@@ -1,9 +1,7 @@
 import { Box, Typography, Button, Link, Grid } from "@mui/material";
-import { AppContext, IProject } from "../Context";
-import { useContext } from "react";
+import { IProject } from "../Context";
 
 export default function ProjectContent({ projectName, projectInformations, elementClassName, compteRenduLink, modeOperatoireLink, projectSkills, image }: IProject) {
-  const { skills } = useContext(AppContext);
 
   return (
     <Box
