@@ -17,7 +17,8 @@ export default function Home() {
       <Box
         className="home-content"
         sx={{
-          maxWidth: "775px",
+          width: "40%",
+          maxWidth: "40%",
           display: "flex",
           flexDirection: { xs: "column-reverse", md: "row" },
           justifyContent: "space-between",
@@ -41,19 +42,18 @@ export default function Home() {
             }}
           >
             <Box>
-              <Typography variant="body2">Hi i'm</Typography>
+              <Typography variant="body2">Bonjour, je suis</Typography>
               <Typography variant="h1">Zarath Mougamadou</Typography>
             </Box>
             <Typography variant="body2">
-              21 years old french student in IT. <br /> I want to become a digital project manager. <br /> Here is my
-              portfolio, enjoy !
+              Etudiant en BTS SIO option SLAM et alternant au sein de Disneyland Paris. <br /> Voici mon portfolio. <br />
             </Typography>
             <Button
               variant="outlined"
               sx={{ px: "25px", borderColor: "primary.main", ":hover": { backgroundColor: "primary.hover" } }}
               href="#about"
             >
-              More informations
+              Plus d'informations
             </Button>
           </Box>
         </Box>

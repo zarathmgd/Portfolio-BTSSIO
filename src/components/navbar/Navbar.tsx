@@ -23,7 +23,7 @@ export default function Home() {
     >
       <Toolbar
         disableGutters
-        sx={{ width: { xs: "90%", md: "700px" }, display: "flex", justifyContent: "space-between", color: "primary.main" }}
+        sx={{ width: { xs: "90%", md: "40%" }, display: "flex", justifyContent: "space-between", color: "primary.main" }}
       >
         <img src={theme.palette.mode === "light" ? LightmodeLogo : DarkmodeLogo} alt="Z Logo" />
         <Box
@@ -44,8 +44,8 @@ export default function Home() {
             gap: { xs: 1, md: 5 },
           }}
         >
-          <Link href="#about" underline="none" color={"inherit"} sx={{ ":hover": { bgcolor: "primary.hover" } }}>
-            About
+          <Link href="#about" whiteSpace={"nowrap"} underline="none" color={"inherit"} sx={{ ":hover": { bgcolor: "primary.hover" } }}>
+            A propos
           </Link>
 
           <Link
@@ -57,7 +57,11 @@ export default function Home() {
               ":hover": { bgcolor: "primary.hover" },
             }}
           >
-            Project
+            Projets
+          </Link>
+
+          <Link href="#veille" underline="none" color={"inherit"} sx={{ ":hover": { bgcolor: "primary.hover" } }}>
+            Veille
           </Link>
 
           <Link href="#contact" underline="none" color={"inherit"} sx={{ ":hover": { bgcolor: "primary.hover" } }}>

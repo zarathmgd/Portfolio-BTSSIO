@@ -1,10 +1,13 @@
-import { Box, Button, Grid, Typography } from "@mui/material";
+import { Box, Button, Grid, Typography, useTheme } from "@mui/material";
 import { motion, useInView, useAnimation } from "framer-motion";
 import AboutContent from "./AboutContent";
 import { useContext, useEffect, useRef } from "react";
 import { AppContext } from "../Context";
+import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
 
 export default function About() {
+  const theme = useTheme();
   const { skills } = useContext(AppContext);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -38,7 +41,7 @@ export default function About() {
       <Box
         className="about-content"
         sx={{
-          maxWidth: "775px",
+          maxWidth: "40%",
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
@@ -54,7 +57,6 @@ export default function About() {
           id="about"
           sx={{
             position: "relative",
-
             "::after": {
               content: "''",
               position: "absolute",
@@ -66,24 +68,40 @@ export default function About() {
             },
           }}
         >
-          About me
+          A propos de moi
         </Typography>
         <AboutContent
-          title={"Who am i ?"}
-          textOne={"I'm a 19 years old self-taught student in IT. I live in France, near Paris"}
-          textTwo={"I go to the gym to work on my physique and I love cooking healthy and tasty meals."}
+          title={"Qui suis-je ?"}
+          textOne={"Je suis étudiant en BTS SIO option SLAM, alternant au sein de Disneyland Paris en tant qu'apprenti Financial Planning & Reporting."}
+          textTwo={"A l'issue de ce BTS, je souhaite poursuivre mes études afin de me spécialiser dans le domaine de la data."}
         />
         <AboutContent
-          title={"What I do ?"}
+          title={"Qu'est-ce que je fais ?"}
           textOne={
-            "I learnt web development with online courses by starting with HTML, CSS and Javascript. After that, I learnt about Typescript, React & MUI. Having an interest in digital, I continued with graphic design. I now want to train in data and digital marketing in order to have a versatile profile to become a project manager."
+            "Souhaitant initialement m'orienter vers le domaine du développement web, je me suis formé de manière autodidacte aux technologies suivantes : HTML, CSS, Javascript, Typescript et React. Parallèlement, je me suis formé au design afin d'obtenir un socle de compétences web complet."
           }
+          textTwo={
+            "Cependant, j'ai découvert le domaine de la data au cours de mes recherches et ce dernier m'a davantage correspondu. En effet, issu d'un cursus orienté vers les mathématiques, la data se positionnait comme le domaine pouvant me permettre de m'exercer à l'informatique et aux mathématiques. Je me suis donc tourné vers l'apprentissage de Python et SQL qui sont les langages les plus utilisés dans ce secteur."
+          }
+        />
+        <AboutContent
+          title={"Entreprise d'alternance - Disneyland Paris"}
+          textOne={"The Walt Disney Company, fondée par Walt Disney en 1923, est l'une des plus grandes entreprises de divertissement au monde. En 1992, l'entreprise a étendu sa magie en Europe avec l'ouverture de Disneyland Paris, situé à Marne-la-Vallée, en France. Inauguré le 12 avril 1992, Disneyland Paris est devenu une destination emblématique, attirant des millions de visiteurs chaque année avec ses parcs à thèmes, ses attractions, ses spectacles et ses expériences immersives. Le complexe emploie environ 18 000 personnes et a réalisé un chiffre d'affaires d'environ 2.4 milliards d'euros en 2024. Il se compose de deux parcs à thèmes, le Parc Disneyland et le Walt Disney Studios, ainsi que de plusieurs hôtels et zones de restauration, offrant une diversité d'activités pour tous les âges."}
+          textTwo={"L'équipe Business Financial Systems (BFS) dont je suis membre, est responsable des systèmes financiers de Disneyland Paris. Nos missions incluent la gestion des utilisateurs et la participation à divers projets financiers. Nous coordonnons des projets, apportons des solutions en tant que support, et servons de contact privilégié pour le métier en cas de problématiques impliquant des acteurs externes, tels que les éditeurs d'applications."}
+  
+        />
+        <AboutContent
+          title={"Quelles sont mes missions en entreprises ?"}
+          textOne={"Au sein de l'équipe Business Financial Systems (BFS), je suis responsable de la gestion des utilisateurs sur plusieurs applications. Cela inclut la création, la modification et la suppression de comptes utilisateurs via un système de tickets. Chaque mois, je réalise un audit des utilisateurs pour identifier et supprimer ceux qui ne se sont pas connectés depuis un certain temps ou qui ont quitté l'entreprise."}
+          textTwo={"En parallèle, je développe et optimise des solutions pour améliorer les processus existants. J'utilise principalement Excel et SQL pour extraire et analyser des données, et je crée des tableaux de bord sur Power BI pour mesurer les performances des systèmes financiers comme SAP BW. J'ai également développé des outils avec Power Query pour faciliter les tests et automatiser les traitements de données, réduisant ainsi les manipulations manuelles et les risques d'erreurs."}
+          textThree={"Par exemple, durant la première année de mon contrat, j'ai mis en place un ETL sur Knime pour automatiser le traitement du budget annuel, simplifiant ainsi un processus auparavant complexe et sujet aux erreurs. Mon rôle consiste à apporter des solutions efficaces et innovantes pour optimiser les opérations financières de l'entreprise."}
+  
         />
       </Box>
       <Box
         className="skills"
         sx={{
-          maxWidth: { xs: "750px", md: "775px" },
+          maxWidth: { xs: "750px", md: "40%" },
           height: "fit-content",
           display: "flex",
           flexDirection: { xs: "column", md: "row" },
@@ -104,7 +122,7 @@ export default function About() {
             "::after": {
               content: "''",
               position: "absolute",
-              left: { xs: "25%", md: "150%" },
+              left: { xs: "25%", md: "110%" },
               bottom: { xs: -5, md: "inherit" },
               width: { xs: "50%", md: "1px" },
               height: { xs: "1px", md: "150%" },
@@ -112,7 +130,7 @@ export default function About() {
             },
           }}
         >
-          Skills
+          Compétences
         </Typography>
         <Grid
           columnGap={2}
@@ -126,7 +144,7 @@ export default function About() {
             alignItems: "center",
           }}
         >
-          {skills.map(({ id, name }: { id: number; name: string }) => {
+          {skills.map(({ id, name }) => {
             return (
               <Grid item key={id}>
                 <Button
@@ -135,7 +153,7 @@ export default function About() {
                     width: "110px",
                     borderColor: "primary.main",
                     fontSize: ".7rem",
-                    ":hover": { backgroundColor: "primary.hover" },
+                    ":hover": { backgroundColor: "primary.hover", cursor: "default" },
                   }}
                 >
                   {name}
@@ -144,6 +162,63 @@ export default function About() {
             );
           })}
         </Grid>
+      </Box>
+      <Box
+        className="timeline"
+        sx={{
+          width: "100%",
+          maxWidth: "800px",
+          marginTop: 10,
+        }}
+      >
+        <Typography variant="h3" sx={{ textAlign: 'center', marginBottom: 3 }}>
+          Parcours
+        </Typography>
+        <VerticalTimeline lineColor={theme.palette.primary.main}>
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work odd"
+            contentStyle={{ background: "inherit", color: theme.palette.primary.main, boxShadow: "none", border: "1px solid" }}
+            contentArrowStyle={{ borderRight: `7px solid ${theme.palette.primary.main}` }}
+            date="2024 - 2026"
+            iconStyle={{ background: theme.palette.background.default, color: '#fff', boxShadow:`0 0 0 2px ${theme.palette.primary.main},inset 0 1px 0 rgba(0,0,0,.08),0 2px 0 4px rgba(0,0,0,.05)` }}
+          >
+            <h3 className="vertical-timeline-element-title">BTS SIO SLAM</h3>
+            <h4 className="vertical-timeline-element-subtitle">Institut F2I</h4>
+            <p>
+              Apprenti Financial Planning & Reporting Disneyland Paris
+            </p>
+          </VerticalTimelineElement>
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work even"
+            contentStyle={{ background: "inherit", color: theme.palette.primary.main, boxShadow: "none", border: "1px solid" }}
+            contentArrowStyle={{ borderRight: `7px solid ${theme.palette.primary.main}` }}
+            date="2022 - 2023"
+            iconStyle={{ background: theme.palette.background.default, color: '#fff', boxShadow:`0 0 0 2px ${theme.palette.primary.main},inset 0 1px 0 rgba(0,0,0,.08),0 2px 0 4px rgba(0,0,0,.05)` }}
+          >
+            <h3 className="vertical-timeline-element-title">BUT MMI</h3>
+            <h4 className="vertical-timeline-element-subtitle">IUT Meaux</h4>
+          </VerticalTimelineElement>
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work odd"
+            contentStyle={{ background: "inherit", color: theme.palette.primary.main, boxShadow: "none", border: "1px solid" }}
+            contentArrowStyle={{ borderRight: `7px solid ${theme.palette.primary.main}` }}
+            date="2021 - 2022"
+            iconStyle={{ background: theme.palette.background.default, color: '#fff', boxShadow:`0 0 0 2px ${theme.palette.primary.main},inset 0 1px 0 rgba(0,0,0,.08),0 2px 0 4px rgba(0,0,0,.05)` }}
+          >
+            <h3 className="vertical-timeline-element-title">Licence Mathématiques Informatique</h3>
+            <h4 className="vertical-timeline-element-subtitle">Université Gustave Eiffel</h4>
+          </VerticalTimelineElement>
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work odd"
+            contentStyle={{ background: "inherit", color: theme.palette.primary.main, boxShadow: "none", border: "1px solid" }}
+            contentArrowStyle={{ borderRight: `7px solid ${theme.palette.primary.main}` }}
+            date="2021"
+            iconStyle={{ background: theme.palette.background.default, color: '#fff', boxShadow:`0 0 0 2px ${theme.palette.primary.main},inset 0 1px 0 rgba(0,0,0,.08),0 2px 0 4px rgba(0,0,0,.05)` }}
+          >
+            <h3 className="vertical-timeline-element-title">Bac Général Mathématiques Physique-Chimie</h3>
+            <h4 className="vertical-timeline-element-subtitle">Lycée Blaise Pascal</h4>
+          </VerticalTimelineElement>
+        </VerticalTimeline>
       </Box>
     </Box>
   );

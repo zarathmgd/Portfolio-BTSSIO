@@ -6,8 +6,8 @@ export default function Contact() {
   const contacts = [
     { id: 0, name: "Email", icon: "fa-regular fa-envelope", link: "mailto: zarathmougamadou@gmail.com" },
     { id: 1, name: "Linkedin", icon: "fa-brands fa-linkedin", link: "https://www.linkedin.com/in/zarathmougamadou/" },
-    { id: 2, name: "Github", icon: "fa-brands fa-github", link: "https://github.com/zarathmgd" },
-    { id: 3, name: "Dribbble", icon: "fa-brands fa-dribbble", link: "https://dribbble.com/Zarath" },
+    { id: 2, name: "Tableau de synthèse E5", icon: "fa-solid fa-file-pdf", link: "./public/8-1 - BTS SIO - 2025 - Annexe 8-1 - Epreuve E5 - Tableau de synthese.pdf" },
+    { id: 3, name: "CV", icon: "fa-regular fa-file", link: `./public/CV.pdf` },
   ];
 
   const ref = useRef(null);
@@ -42,7 +42,7 @@ export default function Contact() {
       <Box
         className="contact-content"
         sx={{
-          maxWidth: "775px",
+          maxWidth: "40%",
           display: "flex",
           flexDirection: "column",
           alignItems: { xs: "center", md: "start" },
@@ -70,9 +70,9 @@ export default function Contact() {
         >
           Contact
         </Typography>
-        <Typography variant="h3">What's next ?</Typography>
+        <Typography variant="h3">Mes contacts ?</Typography>
         <Typography variant="body2" sx={{ textAlign: { xs: "center", md: "start" } }}>
-          I’m currently looking for an apprenticeship contract. If you are a company who is interested by my profile, click below !
+          Vous trouverez ci-dessous mes contacts sur différentes plateformes.
         </Typography>
         <Box
           className="square"
@@ -100,8 +100,9 @@ export default function Contact() {
                   variant="outlined"
                   href={link}
                   target="_blank"
+                  download={name === "CV" ? "CV.pdf" : undefined}
                   sx={{
-                    width: { xs: 300, md: 350 },
+                    width: { xs: 300, md: 300 },
                     display: "flex",
                     justifyContent: "space-between",
                     alignSelf: "center",
@@ -126,7 +127,7 @@ export default function Contact() {
           variant="body2"
           sx={{ marginTop: -2, marginBottom: { xs: 1, md: 3 }, alignSelf: "center", textAlign: "center", fontWeight: 200 }}
         >
-          Designed & Built by Zarath Mougamadou <br /> © 2023 | All rights reserved
+          Designed & Built by Zarath Mougamadou <br /> © 2025 | All rights reserved
         </Typography>
       </Box>
     </Box>

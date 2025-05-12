@@ -10,13 +10,25 @@ export interface IAbout {
   title: string;
   textOne: string;
   textTwo?: string;
+  textThree?: string;
+}
+
+export interface IVeille {
+  title: string;
+  textOne: string;
+  textTwo?: string;
+  textThree?: string;
+  textFour?: string;
 }
 
 export interface IProject {
   projectName: string;
   projectInformations: string;
   elementClassName?: string;
-  link: string;
+  compteRenduLink?: string;
+  modeOperatoireLink?: string;
+  image?: string;
+  projectSkills: {id: number, name: string}[];
 }
 
 const defaultState = {
@@ -34,11 +46,11 @@ export function Context({ children }: any) {
     { id: 0, name: "HTML" },
     { id: 1, name: "CSS" },
     { id: 2, name: "Javascript" },
-    { id: 3, name: "Typescript" },
-    { id: 4, name: "React" },
-    { id: 5, name: "Redux" },
-    { id: 6, name: "Material UI" },
-    { id: 7, name: "Figma" },
+    { id: 2, name: "Figma" },
+    { id: 5, name: "Python" },
+    { id: 6, name: "SQL" },
+    { id: 7, name: "Excel" },
+    { id: 8, name: "PowerBI" },
   ];
 
   return <AppContext.Provider value={{ mode, setMode, skills }}> {children} </AppContext.Provider>;
