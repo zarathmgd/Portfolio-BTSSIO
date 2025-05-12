@@ -1,13 +1,15 @@
 import { Box, Button, Typography, Divider, Grid, Link } from "@mui/material";
 import { useInView, useAnimation, motion } from "framer-motion";
 import { useRef, useEffect } from "react";
+import CV from "../../assets/CV.pdf";
+import syntheseE5 from "../../assets/8-1 - BTS SIO - 2025 - Annexe 8-1 - Epreuve E5 - Tableau de synthese.pdf";
 
 export default function Contact() {
   const contacts = [
     { id: 0, name: "Email", icon: "fa-regular fa-envelope", link: "mailto: zarathmougamadou@gmail.com" },
     { id: 1, name: "Linkedin", icon: "fa-brands fa-linkedin", link: "https://www.linkedin.com/in/zarathmougamadou/" },
-    { id: 2, name: "Tableau de synthèse E5", icon: "fa-solid fa-file-pdf", link: "./public/8-1 - BTS SIO - 2025 - Annexe 8-1 - Epreuve E5 - Tableau de synthese.pdf" },
-    { id: 3, name: "CV", icon: "fa-regular fa-file", link: `./public/CV.pdf` },
+    { id: 2, name: "Tableau de synthèse E5", icon: "fa-solid fa-file-pdf", link: syntheseE5 },
+    { id: 3, name: "CV", icon: "fa-regular fa-file", link: CV },
   ];
 
   const ref = useRef(null);

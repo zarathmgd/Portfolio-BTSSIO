@@ -2,23 +2,29 @@ import React, { useRef, useEffect, useState } from "react";
 import { Box, Typography, Grid, Button } from "@mui/material";
 import { motion, useAnimation, useInView } from "framer-motion";
 import ProjectContent from "./ProjectContent";
+import excelImage from "../../assets/excel-microsoft-2013-application-logo-oo7x8r2rnik4ohlo.jpg";
+import knimeImage from "../../assets/knime_wallpaper.jpg";
+import compteRenduDtimeODB from "../../assets/Compte rendu Outil ODB DTime.pdf";
+import compteRenduKnime from "../../assets/Compte rendu Outil Envoi AOP.pdf";
+import modopDtimeODB from "../../assets/MODE OPERATOIRE Check DTime-ODB_V2.0.pdf";
+import modopKnime from "../../assets/MODE OPERATOIRE Outil Envoi AOP KNIME.pdf";
 
 const projects = [
   {
     projectName: "Outil Check ODB / DTime",
     projectInformations: "Le projet consiste à vérifier l'exactitude des données entre la nouvelle application de gestion des ressources humaines, DTime, et la base de données ODB à Disneyland Paris. Les données transitent par des systèmes ETL, nécessitant des tests pour confirmer leur conformité. L'équipe BFS a développé un outil pour faciliter ces tests, réalisés par des analystes financiers, en se basant sur des scénarios de dates et d'identifiants d'employés.",
-    compteRenduLink: "public/Compte rendu Outil ODB DTime.pdf",
-    modeOperatoireLink: "public/MODE OPERATOIRE Check DTime-ODB_V2.0.pdf",
-    image: "../../assets/excel-microsoft-2013-application-logo-oo7x8r2rnik4ohlo.jpg",
+    compteRenduLink: compteRenduDtimeODB,
+    modeOperatoireLink: modopDtimeODB,
+    image: excelImage,
     skills: [{id: 0, name: "Excel"}],
     category: "Entreprise",
   },
   {
     projectName: "Outil Envoi AOP KNIME",
     projectInformations: "Le projet vise à automatiser l'envoi de l'AOP (Annual Operating Plan) en utilisant KNIME. Auparavant réalisé manuellement via Excel, ce processus est désormais optimisé pour traiter et préparer les données budgétaires annuelles de manière plus efficace et fiable. L'outil KNIME lit les fichiers Excel, effectue les transformations nécessaires, et génère des fichiers prêts à être chargés dans les systèmes BW et ODB, réduisant ainsi le temps et les erreurs.",
-    compteRenduLink: "public/Compte rendu Outil Envoi AOP.pdf",
-    modeOperatoireLink: "public/MODE OPERATOIRE Outil Envoi AOP KNIME.pdf",
-    image: "../../assets/knime_wallpaper.jpg",
+    compteRenduLink: compteRenduKnime,
+    modeOperatoireLink: modopKnime,
+    image: knimeImage,
     skills: [{id: 0, name: "Excel"}, {id: 1, name: "KNIME"}],
     category: "Entreprise",
   },
