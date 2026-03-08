@@ -1,6 +1,5 @@
 import { Box, Button, Typography } from "@mui/material";
 import Navbar from "../navbar/Navbar";
-import Photo from "../../assets/Photo Zarath-Portfolio.png";
 
 export default function Home() {
   return (
@@ -79,7 +78,7 @@ export default function Home() {
             },
           }}
         >
-          <img src={Photo} alt="photo of me" />
+          <img src="/Portfolio-BTSSIO/assets/Photo Zarath-Portfolio.png" alt="photo of me" />
         </Box>
       </Box>
     </Box>
