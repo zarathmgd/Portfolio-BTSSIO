@@ -1,6 +1,4 @@
 import { Box, useTheme, Link, AppBar, Toolbar, Typography } from "@mui/material";
-import DarkmodeLogo from "../../assets/darkmode-logo.png";
-import LightmodeLogo from "../../assets/lightmode-logo.png";
 import { useContext, useState } from "react";
 import { ColorModeContext } from "../../theme/ThemeProvider";
 
@@ -25,7 +23,7 @@ export default function Home() {
         disableGutters
         sx={{ width: { xs: "90%", md: "40%" }, display: "flex", justifyContent: "space-between", color: "primary.main" }}
       >
-        <img src={theme.palette.mode === "light" ? LightmodeLogo : DarkmodeLogo} alt="Z Logo" />
+        <img src={theme.palette.mode === "light" ? "/Portfolio-BTSSIO/assets/lightmode-logo.png" : "/Portfolio-BTSSIO/assets/darkmode-logo.png"} alt="Z Logo" />
         <Box
           component="ul"
           sx={{
