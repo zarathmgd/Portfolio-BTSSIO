@@ -2,7 +2,7 @@ import { Box, Button, Typography, Divider, Grid, Link } from "@mui/material";
 import { useInView, useAnimation, motion } from "framer-motion";
 import { useRef, useEffect } from "react";
 import CV from "../../assets/CV.pdf";
-import syntheseE5 from "../../assets/8-1 - BTS SIO - 2025 - Annexe 8-1 - Epreuve E5 - Tableau de synthese.pdf";
+import syntheseE5 from "../../assets/E5 TABLEAU DE SYNTHESE.pdf";
 
 export default function Contact() {
   const contacts = [
