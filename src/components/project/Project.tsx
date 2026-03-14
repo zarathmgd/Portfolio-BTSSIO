@@ -7,9 +7,9 @@ const projects = [
   {
     projectName: "Outil Check ODB / DTime",
     projectInformations: "Le projet consiste à vérifier l'exactitude des données entre la nouvelle application de gestion des ressources humaines, DTime, et la base de données ODB à Disneyland Paris. Les données transitent par des systèmes ETL, nécessitant des tests pour confirmer leur conformité. L'équipe BFS a développé un outil pour faciliter ces tests, réalisés par des analystes financiers, en se basant sur des scénarios de dates et d'identifiants d'employés.",
-    compteRenduLink: "//assets/Compte rendu Outil ODB DTime.pdf",
-    modeOperatoireLink: "assets/MODE OPERATOIRE Check DTime-ODB_V2.0.pdf",
-    image: "assets/pro.png",
+    compteRenduLink: "/Portfolio-BTSSIO/assets/Compte rendu Outil ODB DTime.pdf",
+    modeOperatoireLink: "/Portfolio-BTSSIO/assets/MODE OPERATOIRE Check DTime-ODB_V2.0.pdf",
+    image: "/Portfolio-BTSSIO/assets/pro.png",
     skills: [{id: 0, name: "Excel"}],
     category: "Entreprise",
   },
@@ -18,7 +18,7 @@ const projects = [
     projectInformations: "Application Web de messagerie fonctionnelle (canaux globaux et privés) avec authentification sécurisée par sessions. L'architecture repose sur un back-end PHP couplé à une base de données MySQL. Focus technique sur la traçabilité : implémentation de Triggers SQL (BEFORE DELETE) pour l'archivage automatisé des messages.",
     compteRenduLink: "https://github.com/zarathmgd/chatbox",
     modeOperatoireLink: "", 
-    image: "assets/school.png", 
+    image: "/Portfolio-BTSSIO/assets/school.png", 
     skills: [
       { id: 0, name: "PHP" }, 
       { id: 1, name: "MySQL" }, 
@@ -29,9 +29,9 @@ const projects = [
   {
     projectName: "Audit SOX & Conformité des Accès",
     projectInformations: "Gestion du processus mensuel d'audit de sécurité et de conformité (normes SOX) pour les systèmes d'information financiers (SRH, Longview, ODB). Le flux implique l'extraction de données multi-sources (requêtes SQL complexes via DBeaver, parsing PDF, exports CSV), la réconciliation des données inter-systèmes sur Excel pour identifier les anomalies (comptes inactifs > 90 jours, départs), et l'application des procédures de remédiation avec génération de preuves d'audit.",
-    modeOperatoireLink: "assets/MODE OPERATOIRE - Audit Users.pdf", 
+    modeOperatoireLink: "/Portfolio-BTSSIO/assets/MODE OPERATOIRE - Audit Users.pdf", 
     compteRenduLink: "",
-    image: "assets/pro.png",
+    image: "/Portfolio-BTSSIO/assets/pro.png",
     skills: [
       { id: 0, name: "SQL" }, 
       { id: 1, name: "Excel" }, 
@@ -44,7 +44,7 @@ const projects = [
     projectInformations: "Application de bureau (Client Lourd) développée en Python offrant une gestion multi-utilisateurs de tâches avec un cycle CRUD complet. L'architecture modulaire sépare l'interface graphique (CustomTkinter) de la logique métier. La persistance locale est sécurisée via SQLite3 en utilisant des requêtes préparées et la gestion des transactions. Livré sous forme d'exécutable autonome (PyInstaller).",
     compteRenduLink: "https://github.com/zarathmgd/tasky",
     modeOperatoireLink: "",
-    image: "assets/home.png",
+    image: "/Portfolio-BTSSIO/assets/home.png",
     skills: [
       { id: 0, name: "Python" }, 
       { id: 1, name: "SQLite" }, 
@@ -55,9 +55,9 @@ const projects = [
   {
     projectName: "Dashboard de Monitoring SAP BW",
     projectInformations: "Conception et développement d'un tableau de bord de Business Intelligence pour le suivi des performances de l'entrepôt de données SAP BW. L'outil permet d'analyser les temps de chargement des flux de données et de surveiller la volumétrie ingérée selon les différents Data Cubes. Il offre à l'équipe technique une vision claire pour optimiser la maintenance et les fenêtres de chargement.",
-    compteRenduLink: "assets/Compte rendu - PBI BW.pdf", 
+    compteRenduLink: "/Portfolio-BTSSIO/assets/Compte rendu - PBI BW.pdf", 
     modeOperatoireLink: "",
-    image: "assets/pro.png",
+    image: "/Portfolio-BTSSIO/assets/pro.png",
     skills: [
       { id: 0, name: "Power BI"}, 
       { id: 1, name: "SAP BW"}, 
@@ -68,9 +68,9 @@ const projects = [
   {
     projectName: "Tests de Non-Régression (Ventes)",
     projectInformations: "Validation technique d'un nouvel extracteur de données de ventes (Food & Merch) avant sa mise en production. Le processus consiste à récupérer des fichiers plats (.pend) via FTP (FileZilla) pour comparer les environnements QA (nouveau système) et PROD (système legacy).",
-    compteRenduLink: "assets/Compte rendu - Test ETI.pdf", 
+    compteRenduLink: "/Portfolio-BTSSIO/assets/Compte rendu - Test ETI.pdf", 
     modeOperatoireLink: "",
-    image: "assets/pro.png",
+    image: "/Portfolio-BTSSIO/assets/pro.png",
     skills: [ 
       { id: 0, name: "FileZilla"}, 
       { id: 1, name: "Excel"}
