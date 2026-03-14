@@ -55,7 +55,7 @@ const projects = [
   {
     projectName: "Dashboard de Monitoring SAP BW",
     projectInformations: "Conception et développement d'un tableau de bord de Business Intelligence pour le suivi des performances de l'entrepôt de données SAP BW. L'outil permet d'analyser les temps de chargement des flux de données et de surveiller la volumétrie ingérée selon les différents Data Cubes. Il offre à l'équipe technique une vision claire pour optimiser la maintenance et les fenêtres de chargement.",
-    compteRenduLink: "/Portfolio-BTSSIO/assets/Compte rendu - PBI BW.pdf", 
+    compteRenduLink: "/Portfolio-BTSSIO/assets/Compte Rendu - PBI BW.pdf", 
     modeOperatoireLink: "",
     image: "/Portfolio-BTSSIO/assets/pro.png",
     skills: [
@@ -68,7 +68,7 @@ const projects = [
   {
     projectName: "Tests de Non-Régression (Ventes)",
     projectInformations: "Validation technique d'un nouvel extracteur de données de ventes (Food & Merch) avant sa mise en production. Le processus consiste à récupérer des fichiers plats (.pend) via FTP (FileZilla) pour comparer les environnements QA (nouveau système) et PROD (système legacy).",
-    compteRenduLink: "/Portfolio-BTSSIO/assets/Compte rendu - Test ETI.pdf", 
+    compteRenduLink: "/Portfolio-BTSSIO/assets/Compte Rendu - Test ETI.pdf", 
     modeOperatoireLink: "",
     image: "/Portfolio-BTSSIO/assets/pro.png",
     skills: [ 
