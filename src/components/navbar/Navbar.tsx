@@ -23,7 +23,7 @@ export default function Home() {
         disableGutters
         sx={{ width: { xs: "90%", md: "40%" }, display: "flex", justifyContent: "space-between", color: "primary.main" }}
       >
-        <img src={theme.palette.mode === "light" ? "/Portfolio-BTSSIO/assets/lightmode-logo.png" : "/Portfolio-BTSSIO/assets/darkmode-logo.png"} alt="Z Logo" />
+        <img src={theme.palette.mode === "light" ? "assets/lightmode-logo.png" : "/assets/darkmode-logo.png"} alt="Z Logo" />
         <Box
           component="ul"
           sx={{
