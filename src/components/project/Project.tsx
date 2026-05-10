@@ -5,12 +5,21 @@ import ProjectContent from "./ProjectContent";
 
 const projects = [
   {
-    projectName: "Outil Check ODB / DTime",
-    projectInformations: "Le projet consiste à vérifier l'exactitude des données entre la nouvelle application de gestion des ressources humaines, DTime, et la base de données ODB à Disneyland Paris. Les données transitent par des systèmes ETL, nécessitant des tests pour confirmer leur conformité. L'équipe BFS a développé un outil pour faciliter ces tests, réalisés par des analystes financiers, en se basant sur des scénarios de dates et d'identifiants d'employés.",
-    compteRenduLink: "/Portfolio-BTSSIO/assets/Compte rendu Outil ODB DTime.pdf",
-    modeOperatoireLink: "/Portfolio-BTSSIO/assets/MODE OPERATOIRE Check DTime-ODB_V2.0.pdf",
+    projectName: "ETL (Knime) -  Envoi du budget annuel",
+    projectInformations: "Le projet vise à automatiser l'envoi de l'AOP (Annual Operating Plan) en utilisant KNIME. Auparavant réalisé manuellement via Excel, ce processus est désormais optimisé pour traiter et préparer les données budgétaires annuelles de manière plus efficace et fiable. L'outil KNIME lit les fichiers Excel, effectue les transformations nécessaires, et génère des fichiers prêts à être chargés dans les systèmes BW et ODB, réduisant ainsi le temps et les erreurs.",
+    compteRenduLink: "/Portfolio-BTSSIO/assets/Compte rendu Outil Envoi AOP.pdf",
+    modeOperatoireLink: "/Portfolio-BTSSIO/assets/MODE OPERATOIRE Outil Envoi AOP KNIME.pdf",
     image: "/Portfolio-BTSSIO/assets/pro.png",
-    skills: [{id: 0, name: "Excel"}],
+    skills: [{id: 0, name: "Knime"}, {id: 1, name: "Excel"}, {id: 2, name: "Java"}],
+    category: "Entreprise",
+  },
+  {
+    projectName: "RPA (UiPath) - Audit Automatisé des Utilisateurs",
+    projectInformations: "Le projet consiste à automatiser l'extraction et le contrôle des utilisateurs sur plusieurs portails web via UiPath. Le robot prend en charge la navigation, capture les écrans de preuve, extrait les listes d'utilisateurs et exécute un nettoyage local (ETL) pour centraliser les données dans un fichier de suivi global, garantissant la sécurité et la conformité des accès.",
+    compteRenduLink: "/Portfolio-BTSSIO/assets/Compte_rendu_Robot_Audit_RPA.pdf",
+    modeOperatoireLink: "/Portfolio-BTSSIO/assets/Mode_Operatoire_Robot_Audit_RPA.pdf",
+    image: "/Portfolio-BTSSIO/assets/pro.png",
+    skills: [{id: 0, name: "UiPath"}, {id: 1, name: "Excel"}, {id: 2, name: "Python"}, {id: 3, name: "SQL"}],
     category: "Entreprise",
   },
   {
@@ -75,6 +84,15 @@ const projects = [
       { id: 0, name: "FileZilla"}, 
       { id: 1, name: "Excel"}
     ],
+    category: "Entreprise",
+  },
+  {
+    projectName: "Outil Check ODB / DTime",
+    projectInformations: "Le projet consiste à vérifier l'exactitude des données entre la nouvelle application de gestion des ressources humaines, DTime, et la base de données ODB à Disneyland Paris. Les données transitent par des systèmes ETL, nécessitant des tests pour confirmer leur conformité. L'équipe BFS a développé un outil pour faciliter ces tests, réalisés par des analystes financiers, en se basant sur des scénarios de dates et d'identifiants d'employés.",
+    compteRenduLink: "/Portfolio-BTSSIO/assets/Compte rendu Outil ODB DTime.pdf",
+    modeOperatoireLink: "/Portfolio-BTSSIO/assets/MODE OPERATOIRE Check DTime-ODB_V2.0.pdf",
+    image: "/Portfolio-BTSSIO/assets/pro.png",
+    skills: [{id: 0, name: "Excel"}],
     category: "Entreprise",
   },
 ];
