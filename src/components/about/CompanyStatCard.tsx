@@ -1,5 +1,4 @@
 import { Card, CardContent, Typography, Box, useTheme } from "@mui/material";
-import React from "react";
 
 interface Props {
   label: string;
