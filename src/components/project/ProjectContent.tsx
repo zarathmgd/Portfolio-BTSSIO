@@ -31,8 +31,10 @@ export default function ProjectContent({
           maxWidth: "575px",
           height: "auto",
           border: "1px solid",
-          borderColor: "primary.main",
+          borderColor: "divider",
           borderRadius: "4px",
+          backgroundColor: "background.paper",
+          boxShadow: 3,
           p: 2.5,
           textAlign: { xs: "center", md: "start" },
         }}

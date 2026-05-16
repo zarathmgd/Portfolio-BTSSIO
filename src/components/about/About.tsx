@@ -1,6 +1,8 @@
 import { Box, Button, Grid, Typography, useTheme } from "@mui/material";
 import { motion, useInView, useAnimation } from "framer-motion";
 import AboutContent from "./AboutContent";
+import InfoCard from "../veille/InfoCard";
+import CompanyStatCard from "./CompanyStatCard";
 import { useContext, useEffect, useRef } from "react";
 import { AppContext } from "../Context";
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
@@ -84,14 +86,42 @@ export default function About() {
             "Cependant, j'ai découvert le domaine de la data au cours de mes recherches et ce dernier m'a davantage correspondu. En effet, issu d'un cursus orienté vers les mathématiques, la data se positionnait comme le domaine pouvant me permettre de m'exercer à l'informatique et aux mathématiques. Je me suis donc tourné vers l'apprentissage de Python et SQL qui sont les langages les plus utilisés dans ce secteur."
           }
         />
+        <Typography variant="h3">Entreprise d'alternance - Disneyland Paris</Typography>
+
+        <Grid container spacing={2} sx={{ mt: 2 }}>
+          <Grid item xs={12} md={6}>
+            <InfoCard
+              icon={<svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="4" width="7" height="16" stroke="currentColor" strokeWidth="1.5" fill="none"/><rect x="14" y="8" width="6" height="12" stroke="currentColor" strokeWidth="1.5" fill="none"/><path d="M6 8h2M6 12h2M6 16h2M16 11h2M16 15h2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg>}
+              title={"Présentation"}
+              text={"The Walt Disney Company, fondée en 1923, a ouvert Disneyland Paris en 1992. Le complexe propose deux parcs à thèmes, plusieurs hôtels et diverses expériences pour tous les publics."}
+            />
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <InfoCard
+              icon={<svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="9" cy="8" r="3" stroke="currentColor" strokeWidth="1.5" fill="none"/><path d="M2 20c1-4 5-6 10-6s9 2 10 6" stroke="currentColor" strokeWidth="1.5" fill="none"/></svg>}
+              title={"Équipe BFS"}
+              text={"L'équipe Business Financial Systems (BFS) gère les systèmes financiers, la gestion des utilisateurs et intervient en tant que support projet pour les problématiques métier et éditeurs externes."}
+            />
+          </Grid>
+        </Grid>
+
+        <Grid container spacing={2} sx={{ mt: 1 }}>
+          <Grid item xs={6} sm={3}>
+            <CompanyStatCard label={"Année d'ouverture"} value={"1992"} />
+          </Grid>
+          <Grid item xs={6} sm={3}>
+            <CompanyStatCard label={"Employés"} value={"18 000"} />
+          </Grid>
+          <Grid item xs={6} sm={3}>
+            <CompanyStatCard label={"Chiffre d'affaires 2024"} value={"2.4 Md €"} />
+          </Grid>
+          <Grid item xs={6} sm={3}>
+            <CompanyStatCard label={"Parcs"} value={"2"} />
+          </Grid>
+        </Grid>
+
         <AboutContent
-          title={"Entreprise d'alternance - Disneyland Paris"}
-          textOne={"The Walt Disney Company, fondée par Walt Disney en 1923, est l'une des plus grandes entreprises de divertissement au monde. En 1992, l'entreprise a étendu sa magie en Europe avec l'ouverture de Disneyland Paris, situé à Marne-la-Vallée, en France. Inauguré le 12 avril 1992, Disneyland Paris est devenu une destination emblématique, attirant des millions de visiteurs chaque année avec ses parcs à thèmes, ses attractions, ses spectacles et ses expériences immersives. Le complexe emploie environ 18 000 personnes et a réalisé un chiffre d'affaires d'environ 2.4 milliards d'euros en 2024. Il se compose de deux parcs à thèmes, le Parc Disneyland et le Walt Disney Studios, ainsi que de plusieurs hôtels et zones de restauration, offrant une diversité d'activités pour tous les âges."}
-          textTwo={"L'équipe Business Financial Systems (BFS) dont je suis membre, est responsable des systèmes financiers de Disneyland Paris. Nos missions incluent la gestion des utilisateurs et la participation à divers projets financiers. Nous coordonnons des projets, apportons des solutions en tant que support, et servons de contact privilégié pour le métier en cas de problématiques impliquant des acteurs externes, tels que les éditeurs d'applications."}
-  
-        />
-        <AboutContent
-          title={"Quelles sont mes missions en entreprises ?"}
+          title={"Quelles sont mes missions en entreprise ?"}
           textOne={"Au sein de l'équipe Business Financial Systems (BFS), je suis responsable de la gestion des utilisateurs sur plusieurs applications. Cela inclut la création, la modification et la suppression de comptes utilisateurs via un système de tickets. Chaque mois, je réalise un audit des utilisateurs pour identifier et supprimer ceux qui ne se sont pas connectés depuis un certain temps ou qui ont quitté l'entreprise."}
           textTwo={"En parallèle, je développe et optimise des solutions pour améliorer les processus existants. J'utilise principalement Excel et SQL pour extraire et analyser des données, et je crée des tableaux de bord sur Power BI pour mesurer les performances des systèmes financiers comme SAP BW. J'ai également développé des outils avec Power Query pour faciliter les tests et automatiser les traitements de données, réduisant ainsi les manipulations manuelles et les risques d'erreurs."}
           textThree={"Par exemple, durant la première année de mon contrat, j'ai mis en place un ETL sur Knime pour automatiser le traitement du budget annuel, simplifiant ainsi un processus auparavant complexe et sujet aux erreurs. Mon rôle consiste à apporter des solutions efficaces et innovantes pour optimiser les opérations financières de l'entreprise."}
@@ -177,7 +207,7 @@ export default function About() {
         <VerticalTimeline lineColor={theme.palette.primary.main}>
           <VerticalTimelineElement
             className="vertical-timeline-element--work odd"
-            contentStyle={{ background: "inherit", color: theme.palette.primary.main, boxShadow: "none", border: "1px solid" }}
+            contentStyle={{ background: theme.palette.background.paper, color: theme.palette.text.primary, boxShadow: theme.shadows[3], border: `1px solid ${theme.palette.divider}` }}
             contentArrowStyle={{ borderRight: `7px solid ${theme.palette.primary.main}` }}
             date="2024 - 2026"
             iconStyle={{ background: theme.palette.background.default, color: '#fff', boxShadow:`0 0 0 2px ${theme.palette.primary.main},inset 0 1px 0 rgba(0,0,0,.08),0 2px 0 4px rgba(0,0,0,.05)` }}
@@ -190,7 +220,7 @@ export default function About() {
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work even"
-            contentStyle={{ background: "inherit", color: theme.palette.primary.main, boxShadow: "none", border: "1px solid" }}
+            contentStyle={{ background: theme.palette.background.paper, color: theme.palette.text.primary, boxShadow: theme.shadows[3], border: `1px solid ${theme.palette.divider}` }}
             contentArrowStyle={{ borderRight: `7px solid ${theme.palette.primary.main}` }}
             date="2022 - 2023"
             iconStyle={{ background: theme.palette.background.default, color: '#fff', boxShadow:`0 0 0 2px ${theme.palette.primary.main},inset 0 1px 0 rgba(0,0,0,.08),0 2px 0 4px rgba(0,0,0,.05)` }}
@@ -200,7 +230,7 @@ export default function About() {
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work odd"
-            contentStyle={{ background: "inherit", color: theme.palette.primary.main, boxShadow: "none", border: "1px solid" }}
+            contentStyle={{ background: theme.palette.background.paper, color: theme.palette.text.primary, boxShadow: theme.shadows[3], border: `1px solid ${theme.palette.divider}` }}
             contentArrowStyle={{ borderRight: `7px solid ${theme.palette.primary.main}` }}
             date="2021 - 2022"
             iconStyle={{ background: theme.palette.background.default, color: '#fff', boxShadow:`0 0 0 2px ${theme.palette.primary.main},inset 0 1px 0 rgba(0,0,0,.08),0 2px 0 4px rgba(0,0,0,.05)` }}
@@ -210,7 +240,7 @@ export default function About() {
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work odd"
-            contentStyle={{ background: "inherit", color: theme.palette.primary.main, boxShadow: "none", border: "1px solid" }}
+            contentStyle={{ background: theme.palette.background.paper, color: theme.palette.text.primary, boxShadow: theme.shadows[3], border: `1px solid ${theme.palette.divider}` }}
             contentArrowStyle={{ borderRight: `7px solid ${theme.palette.primary.main}` }}
             date="2021"
             iconStyle={{ background: theme.palette.background.default, color: '#fff', boxShadow:`0 0 0 2px ${theme.palette.primary.main},inset 0 1px 0 rgba(0,0,0,.08),0 2px 0 4px rgba(0,0,0,.05)` }}
